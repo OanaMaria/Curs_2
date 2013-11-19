@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tabel angajati</title>
+
+		<style> 
+		.tabel_angajati{
+			border: 2.5px solid #333333;
+		}
+		
+		.linii{
+			 border-bottom: 1px solid #333333;
+		}
+		
+		.element{ 
+			 border-bottom: 1px solid #333333;
+			 border-left: 1px solid #333333;
+			 color: blue;
+		}
+		
+		#nume{
+			cursor: pointer;
+		}
+		
+		</style>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			
+			$(function(){
+			
+				 $('#nume').click(function() {
+					$('#nume').html('');
+				});
+			
+				$('#formular').submit(function(e){
+					 e.preventDefault();
+					 
+					 var nume1 = $('#nume1').val();
+					 var prenume = $('#prenume').val();
+					 var departament = $('#departament').val();
+					 var data_angajare = $('#data_angajare').val();
+					 var functie = $('#functie').val();
+					 
+					 
+					 
+					 $('.tabel_angajati tr:last').after('<tr><td>' + nume1 + '</td>' + '<td>' + prenume + '</td>' + '<td>' + departament + '</td>' + '<td>' + data_angajare + '</td>' + '<td>' + functie + '</td></tr>');
+					 
+				});
+			
+			});
+			
+			
+		
+		</script>
+		
+	</head>
+	<body>
+	<h1>Tabel Angajati</h1>
+	
+	<table class = "tabel_angajati">
+	
+	<tr class = "linii">
+		<td class = "element" id = "nume">Nume </td>
+		<td class = "element">Prenume </td>
+		<td class = "element">Departament </td>
+		<td class = "element">Data angajarii </td>
+		<td class = "element">Functie </td>
+	</tr>
+	
+	<tr class = "linii">
+		<td class = "element">Vasilescu </td>
+		<td class = "element" >Ion </td>
+		<td class = "element">IT </td>
+		<td class = "element">18.09.2012 </td>
+		<td class = "element">Dezvoltator </td>
+	</tr>
+	
+	<tr class = "linii">
+		<td class = "element">Vasilescu </td>
+		<td class = "element">Ion </td>
+		<td class = "element">IT </td>
+		<td class = "element">18.09.2012 </td>
+		<td class = "element">Dezvoltator </td>
+	</tr>
+	
+	<tr class = "linii">
+		<td class = "element">Vasilescu </td>
+		<td class = "element">Ion </td>
+		<td class = "element">IT </td>
+		<td class = "element">18.09.2012 </td>
+		<td class = "element">Dezvoltator </td>
+	</tr>
+	
+	<tr class = "linii">
+		<td class = "element">Vasilescu </td>
+		<td class = "element">Ion </td>
+		<td class = "element">IT </td>
+		<td class = "element">18.09.2012 </td>
+		<td class = "element">Dezvoltator </td>
+	</tr>
+	
+	<tr class = "linii">
+		<td class = "element">Vasilescu </td>
+		<td class = "element">Ion </td>
+		<td class = "element">IT </td>
+		<td class = "element">18.09.2012 </td>
+		<td class = "element">Dezvoltator </td>
+	</tr>
+
+	<form id="formular">
+                        <p>Nume   </p> <input id="nume1" type="text" /> 
+                        <p>Prenume   </p> <input id="prenume" type="text" />
+						<p>Departament   </p> <input id="departament" type="text" />
+						<p>Data angajarii   </p> <input id="data_angajare" type="text" />
+						<p>Functie   </p> <input id="functie" type="text" />
+						<input id="submit-formular" type="submit" />
+						<p></p>
+                </form>
+	
+	</table>
+	</body>
+
+
+</html>
